@@ -1,0 +1,50 @@
+### GET /
+
+GET http://localhost:5000
+
+###Post auth/register
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "mike ox long",
+    "password": "123123"
+}
+
+### POST auth/login
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "omegaraven",
+    "password": "123123"
+}
+
+### GET todos
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkxNzMyMTQ4LCJleHAiOjE3OTE4MTg1NDh9.ECvFr8KZQJx9AxerFo5GUiyqeAdfXn91lEM75VBZh8E
+
+###   POST todos
+POST http://localhost:5000/todos
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkxNzMyMTQ4LCJleHAiOjE3OTE4MTg1NDh9.ECvFr8KZQJx9AxerFo5GUiyqeAdfXn91lEM75VBZh8E
+
+{
+    "task": "Learn backend"
+}
+
+### PUT todos/:id
+
+PUT http://localhost:5000/todos/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkxNzMyMTQ4LCJleHAiOjE3OTE4MTg1NDh9.ECvFr8KZQJx9AxerFo5GUiyqeAdfXn91lEM75VBZh8E
+
+{
+    "completed": 1
+}
+
+### DELETE todos/:id
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkxNzMyMTQ4LCJleHAiOjE3OTE4MTg1NDh9.ECvFr8KZQJx9AxerFo5GUiyqeAdfXn91lEM75VBZh8E
